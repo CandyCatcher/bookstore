@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>top</title>
+</head>
+<body>
+    <div id="login_dialog" class="modal fade login-popup">
+        <div class="popup-inner">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal" aria-hidden="true">X</a>
+                <h3 class="modal-title">登录</h3>
+            </div>
+            <div>
+                <p class="login-username">
+                    <label for="user_name">用户名*:</label>
+                    <input name="log" id="user_name" class="input" size="20" type="text">
+                </p>
+                <p class="login-password">
+                    <label for="user_pass">密码*:</label>
+                    <input name="pwd" id="user_pass" class="input" size="20" type="password">
+                </p>
+                <p class="login-submit">
+                    <button class="btn button-primary" value="登录" onclick="login()"></button>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="#">注册</a>
+                <a href="#">忘记密码</a>
+            </div>
+        </div><!-- .popup-inner -->
+        <div class="mask popup-close"></div>
+    </div><!-- .search-popup -->
+
+    <header id="header" class="site-header">
+
+        <div class="top-header">
+            <div class="no-container">
+                <div class="right-header" id="inform">
+
+                </div><!-- right-header -->
+
+                <div class="site-brand">
+                    <a class="logo" href="index.html">
+                        <h1>Candy Book Store</h1>
+                    </a>
+                </div><!-- .site-brand -->
+            </div>
+        </div><!-- top-header -->
+
+        <div class="header-menu">
+            <div class="container">
+                <div class="site-brand">
+                    <a class="logo" href="index.html">
+                        <img src="images/assets/logo.png" alt="Vineyard">
+                    </a>
+                </div>
+                <nav class="main-menu">
+                    <span class="mobile-menu"><i class="fa fa-bars"></i></span>
+                    <ul>
+                        <li class="mega-menu-wrap"><a href="index.html">主页</a></li>
+                        <li class="mega-menu-wrap"><a href="allBooks.html">全部书籍</a></li>
+                        <li class="mega-menu-wrap"><a href="cart.html">购物车</a></li>
+                    </ul>
+                </nav><!-- .main-menu -->
+            </div>
+        </div><!-- header-menu -->
+
+    </header><!-- .site-header -->
+<script>
+
+    $.ajax({
+        url:'/bookstore/userServlet?method=isLogin',
+        dataType:"Json",
+        type:"GET",
+        success:function (data) {
+            if (data == null) {
+                $("#inform").html("<ul><li>" +
+                    "<a class='top-account top-login' href='#' data-toggle='modal' data-target='#login_dialog'>" +
+                    "<i class='pe-7s-users'></i></a>" +
+                    "</li></ul>");
+            } else {
+                $("#inform").html("<ul><li><h3>您好:" + data + "&nbsp;&nbsp;</h3></li>" +
+                    "<li>" +
+                    "    <a class='cart-control' href='cart.html'>" +
+                    "        <i class='pe-7s-shopbag cart-icon'></i>" +
+                    "<h4>购物车</h4>" +
+                    "    </a>" +
+                    "</li>" +
+                    "<li>" +
+                    "    <a class='cart-control' href=''>" +
+                    "        <i class='pe-7s-check cart-icon'></i>" +
+                    "<h4>我的订单</h4>" +
+                    "    </a>" +
+                    "</li>" +
+                    "<li>" +
+                    "    <a class='cart-control' href='/userServlet?method=quit'>" +
+                    "        <i class='pe-7s-drop exit-icon'></i>" +
+                    "<h4>退出</h4>" +
+                    "    </a>" +
+                    "</li>" +
+                    "</ul>");
+            }
+        }
+    });
+
+    function login() {
+        var name = $("#user_name").val();
+        var password = $("#user_pass").val();
+            $.ajax({
+            url:'/bookstore/userServlet?method=login',
+            dataType:"Json",
+            type:"POST",
+            data:{"username":name, "password":password},
+            success:function (data) {
+                for(var i in data)//k是索引
+                {
+                    alert(data[i]);
+                }
+                window.location.replace("/bookstore/index.html");
+            }
+        })
+    }
+
+</script>
+</body>
+</html>

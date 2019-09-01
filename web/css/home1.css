@@ -1,0 +1,337 @@
+.home-01 .top-header{
+    background: #f4f6f9;
+}
+.home-01 .right-header ul li a{
+    color: #363636;
+}
+.home-01 .main-menu > ul > li > a{
+    padding-bottom: 12px;
+}
+.home-01 .site-header{
+    background: transparent;
+}
+.home-01 .header-menu{
+    padding-top: 12px;
+    background: transparent;
+    position: fixed;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    z-index: 999;
+}
+.home-01.sticky-bg .header-menu{
+    background-color: rgba(0,0,0,0.9);
+}
+.home-01 .inner-top {
+    background: #f4f6f9;
+    padding: 100px 0;
+}
+.home-01 .inner-top .intro-image{
+    z-index: 10;
+}
+.home-01 .deal-week .countdown{
+    margin-top: 30px;
+}
+.home-01 .deal-week{
+    padding: 95px 15px 75px 15px;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+.home-01 .title_main_text{
+    text-align: center;
+    max-width: 765px;
+    margin: 0 auto;
+    margin-right: 0;
+}
+.home-01 .deal-slider .product .tb-product-item {
+    max-width: 371px;
+    height: 506px;
+    width: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.175);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.175);
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.175);
+}
+.home-01 .deal-slider .product .tb-product-item {
+    position: relative;
+    text-align: center;
+    max-height: 535px;
+}
+.home-01 .tb-product-item {
+    border-radius: 20px;
+    min-height: 502px;
+}
+.home-01 .tb-product-item .tb-image .tb-item-content-image{
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    border: none;
+}
+.home-01 .tb-product-item .tb-image {
+    text-align: center;
+}
+.home-01 .product .tb-product-item .tb-content .tb-price-rating span.amount {
+    position: absolute;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    background: #a53e4c;
+    line-height: 25px;
+    top: 60%;
+    padding: 5px 40px 5px 20px;
+    left: 42%;
+    letter-spacing: 0.2em;
+}
+.home-01 .product .tb-product-item .tb-content .tb-price-rating span.amount:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-right: 20px solid #fff;
+    border-top: 15px solid transparent;
+    border-bottom: 19px solid transparent;
+}
+.home-01 .deal-slider .owl-carousel .owl-item img{
+    width: auto;
+    text-align: center;
+}
+.home-01 .deal-slider .owl-dots .owl-dot.active span {
+    border-color: #a53e4c;
+}
+.home-01 .deal-slider .owl-dots .owl-dot {
+    display: inline-block;
+}
+.home-01 .deal-slider .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    border-radius: 50%;
+    border: 1px solid #dbdde0;
+    display: block;
+}
+.home-01 .deal-slider .owl-dots {
+    text-align: CENTER;
+    position: relative;
+    top: -50px;
+}
+.home-01 .event-box,
+.home-03 .event-box{
+    padding: 100px 0;
+    background-attachment: fixed;
+}
+.home-01 .event_winnes .colum_a {
+    margin-bottom: 65px;
+}
+.home-01 .event_winnes .colum_a:first-child {
+    margin-top: 78px;
+}
+.home-01 .event_winnes .colum_a .show_time_day .the_date {
+    font-family: cinzel;
+    font-size: 100px;
+    line-height: 30px;
+    color: #ffffff;
+    opacity: .2;
+    position: absolute;
+    left: 55px;
+    letter-spacing: 3px;
+    font-weight: 900;
+    font-style: normal;
+    visibility: visible;
+    -webkit-transition: opacity 0.24s ease-in-out;
+    -moz-transition: opacity 0.24s ease-in-out;
+    transition: opacity 0.24s ease-in-out;
+}
+.home-01 .event_winnes .colum_a .show_time_day .the_month {
+    text-align: left;
+    font-family: Josefin Sans;
+    font-size: 36px;
+    line-height: 30px;
+    color: #a53e4c;
+    font-weight: normal;
+}
+.home-01 .event_winnes .colum_a .show_time_day .the_date_time {
+    font-family: Josefin Sans;
+    font-size: 18px;
+    line-height: 30px;
+    color: #b7b7b7;
+    margin-top: 35px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.home-01 .event-box .break-line span:before,
+.home-01 .event-box .break-line span::after,
+.home-03 .event-box .break-line span:before,
+.home-03 .event-box .break-line span::after{
+    background: #524e4d;
+}
+.home-01 .event_winnes .colum_a .show_content .get_text a{
+    color: #fff;
+}
+.home-01 .event_winnes .colum_a .show_content .get_text {
+    margin: 0px 0px;
+    font-family: cinzel;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+}
+.home-01 .event_winnes .colum_a .show_content .get_context a{
+    color: #b7b7b7;
+}
+.home-01 .event_winnes .colum_a .show_content .get_context {
+    font-family: Josefin Sans;
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: 3px;
+}
+.home-01 .event_winnes .colum_a .show_the_sale {
+    text-align: right;
+}
+.home-01 .event_winnes .colum_a .show_sale .the_sale {
+    font-family: cinzel;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    color: #a53e4c;
+    margin-bottom: 5px;
+}
+.home-01 .event_winnes .colum_a .show_sale .the_text_note {
+    font-family: Josefin Sans;
+    font-size: 14px;
+    line-height: 36px;
+    color: #b7b7b7;
+    text-transform: uppercase;
+}
+.home-01 .event-box .show_content:after,
+.home-03 .event-box .show_content:after{
+    display: none;
+}
+.home-01 .event-box .event_winnes,
+.home-03 .event-box .event_winnes {
+    border-top: 1px dashed #7d634d;
+    border-bottom: 1px dashed #7d634d;
+}
+.home-01 .event-box .title-box h3,
+.home-03 .event-box .title-box h3{
+    color: #fff;
+}
+.home-01 .event_winnes .colum_a:last-child{
+    margin-bottom: 45px;
+}
+.home-01 .blog-box {
+    padding: 100px 0;
+}
+.home-01 .blog-box .colum_b .show_meta_day_month .the_month{
+    left: auto;
+    right: 70px;
+}
+.home-01 .blog-box .colum_b .show_meta_day_month .the_date{
+    text-align: right;
+}
+.home-01 .blog-box .colum_b .show_text_read {
+    text-align: right;
+}
+.home-01 .blog-box .colum_b .show_text_read .show_post_text {
+    text-align: right;
+}
+.home-01 .site-main{
+    padding-top: 0;
+}
+.home-01 .site-content{
+    padding-bottom: 0;
+}
+.home-01 .infor-us {
+    margin: 60px 0 0 0;
+}
+.btn-viney {
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 30px;
+    color: #363636;
+    border: 1px solid;
+    padding: 5px 0;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    width: 160px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.btn-viney:hover {
+    border-color: #a53e4c;
+    color: #fff;
+    background-color: #a53e4c;
+}
+.deal-week .btn-viney{
+    margin-top: 65px;
+}
+.deal-week p{
+    margin-bottom: 0;
+}
+.home-01 .featured-tab-heading,
+.home-03 .featured-tab-heading,
+.home-04 .featured-tab-heading,
+.home-02 .featured-tab-heading {
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 10px;
+}
+.home-01 .featured-box{
+    border-radius: 20px;
+    padding: 100px 0;
+}
+.home-01 .featured-tab-heading ul li a.active,
+.home-01 .featured-tab-heading ul li a:hover{
+    color: #882633;
+}
+.home-02 .featured-tab-heading ul li a,
+.home-03 .featured-tab-heading ul li a,
+.home-04 .featured-tab-heading ul li a,
+.home-01 .featured-tab-heading ul li a{
+    font-size: 14px;
+    color: #363636;
+    line-height: 36px;
+    letter-spacing: 0.2em;
+}
+.home-01 .featured-tab-heading ul li,
+.home-04 .featured-tab-heading ul li,
+.home-02 .featured-tab-heading ul li{
+    display: inline-block;
+    padding: 0 23px;
+}
+
+.home-01 .slider-product,
+.home-03 .slider-product{
+    padding: 100px 0 70px 0;
+}
+.home-01 .slider-product .owl-carousel .owl-nav .owl-next:hover {
+    color: #a53e4c;
+    border-color: #a53e4c;
+}
+.home-03 .slider-product .owl-carousel .owl-nav .owl-next,
+.home-01 .slider-product .owl-carousel .owl-nav .owl-next {
+    width: 30px;
+    font-size: 20px;
+    height: 30px;
+    top: -85px;
+    right: 30px;
+    background-color: transparent;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(229, 229, 229);
+    transition: all 0.7s;
+    line-height: 28px;
+    text-align: center;
+}

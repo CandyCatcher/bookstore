@@ -1,0 +1,113 @@
+<!doctype html>
+<html xmlns:c="http://www.w3.org/1999/XSL/Transform">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Desc Page</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Favicon -->
+
+</head>
+
+<body class="single-post">
+
+
+    <div id="wrapper">
+        <div id="top"></div>
+        <div class="container">
+        <main id="main" class="site-main">
+            <div class="row">
+                <div class="b-image col-xs-5">
+                    <img src="images/placeholder/product-lg1.jpg" alt=""/>
+                </div>
+                <div class="col-xs-6">
+                    <div class="title-box">
+                        <h3 id="book_name"></h3>
+                        <h5 id="book_author"></h5>
+                        <h5 id="book_price"></h5>
+                        <h5>数量<input id="book_count" type="text" value="0">　<input  type="button" onclick="buyBook()" value="购买"></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="break-line"><span><img src="images/assets/break-image.png" alt=""/></span></div>
+            </div>
+            <div class="row">
+                <div class="b-detail">
+                    第1卷首先介绍编程的基本概念和技术，然后详细讲解信息结构方面的内容，包括信息在计算机内部的表示方法、数据元素之间的结构关系，以及有效的信息处理方法。此外，书中还描述了编程在模拟、数值方法、符号计算、软件与系统设计等方面的初级应用。此第3版增加了数十项简单但重要的算法和技术，并根据当前研究发展趋势在数学预备知识方面做了大量修改。
+                </div>
+            </div>
+            <div class="row">
+                <div class="break-line"><span><img src="images/assets/break-image.png" alt=""/></span></div>
+            </div>
+        </main>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+</div><!-- #wrapper -->
+
+<!-- jQuery -->
+<script src="js/jquery-1.12.4.min.js"></script>
+<!-- Boostrap -->
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/vendor/bootstrap-select.min.js"></script>
+<!-- jQuery Sticky -->
+<script src="js/vendor/jquery.sticky.js"></script>
+<!-- OWL CAROUSEL Slider -->
+<script src="js/vendor/owl.carousel.min.js"></script>
+<!-- Flexslider -->
+<script src="js/vendor/flexslider.min.js"></script>
+<!-- PrettyPhoto -->
+<script src="js/vendor/jquery.prettyPhoto.js"></script>
+<!-- Jquery Countdown -->
+<script src="js/vendor/jquery.countdown.js"></script>
+<!-- Jquery Parallax -->
+<script src="js/vendor/parallax.js"></script>
+<!-- jQuery UI -->
+<script src="js/vendor/jquery-ui.min.js"></script>
+<!-- Jquery Masonry -->
+<script src="js/vendor/masonry.pkgd.min.js"></script>
+<!-- Main -->
+<script src="js/main.js"></script>
+
+<script>
+        $("#top").load("top.html");
+        $("#footer").load("footer.html");
+
+        var query = window.location.search.substring(1);
+        var pair = query.split("=");
+        var bid = pair[1];
+        $.ajax({
+            url: "/bookstore/Book?method=load",
+            dataType: "JSON",
+            type: "GET",
+            data: {"bid":bid},
+            success: function (data) {
+                $(data).each(function (i, n) {
+                    $('#book_name').html(n.bname);
+                    $('#book_author').html("作者:" +　n.author);
+                    $('#book_price').html("价格:" + n.price);
+                })
+            }
+        });
+
+        var count = $('#book_count').val();
+
+        function buyBook() {
+            $.ajax({
+                url: "/bookstore/Cart?method=add",
+                dataType: "JSON",
+                type: "POST",
+                data: {"bid":bid, "count": count},
+                success:function (data) {
+                    window.location.href = '/bookstore/desc.html';
+                }
+            });
+        }
+
+</script>
+</body>
+</html>

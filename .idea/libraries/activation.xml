@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="activation">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Documents/lib2/activation.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/lib2/c3p0-0.9.2-pre1.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/lib2/common_util.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/lib2/commons-beanutils-1.8.3.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/lib2/commons-dbutils-1.4.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/lib2/commons-fileupload-1.2.2.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/lib2/commons-io-1.4.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/lib2/commons-lang-2.6.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/lib2/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/lib2/json-lib-2.4-jdk15.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/lib2/jstl-1.2.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/lib2/mail.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/lib2/mchange-commons-0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

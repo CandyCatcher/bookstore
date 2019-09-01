@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cart Page</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Favicon -->
+</head>
+
+<body>
+<div id="wrapper">
+    <div id="top"></div>
+
+        <div class="container">
+
+            <main id="main" class="site-main">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>书名</th>
+                            <th>作者</th>
+                            <th>单价</th>
+                            <th>数量</th>
+                            <th>小计</th>
+                            <th><a href="#" class="" title="#">操作<i class="pe-7s-close"></i></a></th>
+                        </tr>
+                    </thead>
+                    <tbody id="list">
+
+                    </tbody>
+                </table>
+                <div class="cart-actions clearfix">
+                    <span>Checkout with multiple address</span>
+                    <form action="#">
+                        <a class="button radius text-center bold plum" href="checkout.html">PROCESS TO CHECK OUT</a>
+                    </form>
+                </div><!-- .cart-actions -->
+
+            </main><!-- .site-main -->
+        </div><!-- .container -->
+    <div id="footer"></div>
+</div><!-- #wrapper -->
+
+<!-- jQuery -->
+<script src="js/jquery-1.12.4.min.js"></script>
+<!-- Boostrap -->
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/vendor/bootstrap-select.min.js"></script>
+<!-- jQuery Sticky -->
+<script src="js/vendor/jquery.sticky.js"></script>
+<!-- OWL CAROUSEL Slider -->
+<script src="js/vendor/owl.carousel.min.js"></script>
+<!-- Flexslider -->
+<script src="js/vendor/flexslider.min.js"></script>
+<!-- PrettyPhoto -->
+<script src="js/vendor/jquery.prettyPhoto.js"></script>
+<!-- Jquery Countdown -->
+<script src="js/vendor/jquery.countdown.js"></script>
+<!-- Jquery Parallax -->
+<script src="js/vendor/parallax.js"></script>
+<!-- jQuery UI -->
+<script src="js/vendor/jquery-ui.min.js"></script>
+<!-- Jquery Masonry -->
+<script src="js/vendor/masonry.pkgd.min.js"></script>
+<!-- Main -->
+<script src="js/main.js"></script>
+
+<script>
+    $("#top").load("top.html");
+    $("#footer").load("footer.html");
+    $.ajax({
+        url:"/bookstore/Cart?method=getCart",
+        type:"GET",
+        success:function (data) {
+            $.each(function (i, n) {
+                $("#list").html("<tr>" +
+                    "<td>" + n.book.bname + "</td>" +
+                    "<td>" + n.book.author + "</td>" +
+                    "<td>" + n.book.price + "</td>" +
+                    "<td>" + n.cartItem.count + "</td>" +
+                    "<td>" + n.cartItem.allPrice + "</td>" +
+                    "<td>" +  + "</td>" +
+                    "<tr>"
+                );
+            })
+        }
+    })
+</script>
+</body>
+</html>
